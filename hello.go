@@ -12,6 +12,10 @@ func Hello(name, language string) string {
 	if name == "" {
 		name = "World"
 	}
+	return greatingPrefix(language) + name
+}
+
+func greatingPrefix(language string) string {
 	prefix := englishHelloPrefix
 
 	switch language {
@@ -22,7 +26,7 @@ func Hello(name, language string) string {
 		prefix = frenchHelloPrifix
 
 	}
-	return prefix + name
+	return prefix
 }
 
 func main() {
