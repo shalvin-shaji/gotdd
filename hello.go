@@ -15,8 +15,7 @@ func Hello(name, language string) string {
 	return greatingPrefix(language) + name
 }
 
-func greatingPrefix(language string) string {
-	prefix := englishHelloPrefix
+func greatingPrefix(language string) (prefix string) {
 
 	switch language {
 
@@ -24,9 +23,11 @@ func greatingPrefix(language string) string {
 		prefix = spanishHelloPrifix
 	case french:
 		prefix = frenchHelloPrifix
+	default:
+		prefix = englishHelloPrefix
 
 	}
-	return prefix
+	return
 }
 
 func main() {
