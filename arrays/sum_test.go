@@ -1,6 +1,7 @@
 package arrays
 
 import "testing"
+import "slices"
 
 func TestSum(t *testing.T) {
 	t.Run("collection of 5 number", func(t *testing.T) {
@@ -19,4 +20,13 @@ func TestSum(t *testing.T) {
 			t.Errorf("got '%d' but expected '%d', given %v", got, expected, numbers)
 		}
 	})
+}
+
+func TestSumAll(t *testing.T) {
+	got := SumAll([]int{1, 2}, []int{3, 4})
+	expected := []int{3, 7}
+
+	if !slices.Equal(got, expected) {
+		t.Errorf("got %v but expected %v", got, expected)
+	}
 }
