@@ -46,6 +46,7 @@ func TestAreaTable(t *testing.T) {
 	}{
 		{Rectangle{20.0, 10.0}, 200, "Calculate area of rectange"},
 		{Circle{1.0}, 3.141592653589793, "Calculate area of circle"},
+		{Triangle{10, 12}, 60, "Calculate area of a triangle"},
 	}
 
 	for _, test := range areaTests {
